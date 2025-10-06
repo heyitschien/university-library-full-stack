@@ -2,7 +2,7 @@ import FeaturedBook from "@/components/FeaturedBook";
 import PopularBooks from "@/components/PopularBooks";
 import { getFeaturedBook, getPopularBooks } from "@/lib/books";
 
-export default async function WebHomePage() {
+export default async function HomePage() {
   const [featured, popular] = await Promise.all([
     getFeaturedBook(),
     getPopularBooks(12),

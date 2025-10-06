@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "/web" },
+  { label: "Home", href: "/" },
   { label: "Search", href: "/search" },
 ];
 
@@ -21,7 +21,7 @@ export default function Header() {
           <div className="w-full rounded-full bg-white/5 shadow-[0_30px_70px_-45px_rgba(8,12,48,0.9)]">
             <div className="bg-white/8 relative flex w-full items-center justify-between gap-8 rounded-full px-7 py-3.5 backdrop-blur-2xl">
 
-              <Link href="/web" className="relative flex items-center gap-3">
+              <Link href="/" className="relative flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center">
                   <Image
                     src="/icons/logo.svg"
@@ -40,7 +40,7 @@ export default function Header() {
                 {NAV_ITEMS.map((item) => {
                   const isActive =
                     pathname === item.href ||
-                    (item.href === "/web" && pathname === "/");
+                    (item.href === "/" && pathname === "/");
                   return (
                     <Link
                       key={item.href}
