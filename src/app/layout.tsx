@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { AppToaster } from "@/components/ui/toaster";
 
 // IBM Plex Sans as the app sans font (multiple weights)
 const plexSans = localFont({
@@ -60,6 +61,7 @@ export default function RootLayout({
         className={`${plexSans.variable} ${bebasDisplay.variable} min-h-screen bg-background font-sans antialiased`}
       >
         {children}
+        <AppToaster />
       </body>
     </html>
   );
