@@ -65,7 +65,7 @@ export default function FeaturedBook({ book }: Props) {
             </div>
           </div>
 
-          <div className="relative mx-auto flex w-full max-w-xs justify-center lg:justify-end">
+          <div className="relative mx-auto flex w-full max-w-sm justify-center sm:max-w-md lg:justify-end">
             <div className="absolute inset-0 translate-x-6 translate-y-8 rounded-[2.5rem] bg-primary/15 blur-3xl" />
             <div className="from-white/12 via-white/6 relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br to-transparent p-6 shadow-[0_25px_70px_-30px_rgba(12,16,60,0.8)]">
               <div className="absolute inset-0 bg-[radial-gradient(80%_100%_at_20%_0%,rgba(255,255,255,0.12),transparent)]" />
@@ -75,7 +75,7 @@ export default function FeaturedBook({ book }: Props) {
                   alt={`${book.title} cover`}
                   width={320}
                   height={480}
-                  className="h-auto w-[200px] rounded-2xl shadow-2xl sm:w-[240px] lg:w-[260px]"
+                  className="h-auto w-64 rounded-2xl shadow-2xl sm:w-72 lg:w-[260px]"
                   priority
                 />
               </div>
