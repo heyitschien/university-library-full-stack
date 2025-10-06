@@ -15,7 +15,7 @@ export default function FeaturedBook({ book }: Props) {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:gap-16">
           <div className="flex flex-col gap-6">
             <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-primary/90">
-              BookWise
+              Featured Book
             </span>
             <div className="space-y-3">
               <h1 className="text-balance font-display text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
