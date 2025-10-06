@@ -22,10 +22,12 @@ export default function FeaturedBook({ book }: Props) {
                 {book.title}
               </h1>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                <span className="text-foreground/90">By {book.author}</span>
+                <span>
+                  By <span className="text-primary/90">{book.author}</span>
+                </span>
                 <span className="text-muted-foreground">
-                  Category:{" "}
-                  <span className="text-foreground/90">{book.genre}</span>
+                  Category: {" "}
+                  <span className="text-primary/90">{book.genre}</span>
                 </span>
                 <span className="inline-flex items-center gap-1 text-primary/90">
                   <Star className="h-4 w-4 fill-current" />
@@ -35,14 +37,14 @@ export default function FeaturedBook({ book }: Props) {
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <span>
-                Total books:{" "}
-                <span className="font-semibold text-foreground">
+                Total books: {" "}
+                <span className="font-semibold text-primary/90">
                   {book.totalCopies}
                 </span>
               </span>
               <span>
-                Available books:{" "}
-                <span className="font-semibold text-foreground">
+                Available books: {" "}
+                <span className="font-semibold text-primary/90">
                   {book.availableCopies}
                 </span>
               </span>
@@ -57,6 +59,7 @@ export default function FeaturedBook({ book }: Props) {
                 size="lg"
                 className="rounded-full bg-primary px-8 text-sm font-semibold uppercase tracking-wide text-primary-foreground shadow-[0_15px_40px_-20px_hsl(var(--primary))] transition-transform duration-200 hover:-translate-y-0.5"
               >
+                <Image src="/icons/book.svg" alt="Book icon" width={16} height={16} className="mr-2" />
                 Borrow book request
               </Button>
             </div>
