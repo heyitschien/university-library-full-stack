@@ -46,6 +46,7 @@ const bebasDisplay = localFont({
 export const metadata: Metadata = {
   title: "BookWise",
   description: "A library app for students",
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({
