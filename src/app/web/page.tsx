@@ -1,27 +1,25 @@
-import { Button } from "@/components/ui/button";
+import FeaturedBook from "@/components/FeaturedBook";
+import PopularBooks from "@/components/PopularBooks";
+import { getFeaturedBook, getPopularBooks } from "@/lib/books";
 
-export default function Home() {
+export default async function WebHomePage() {
+  const [featured, popular] = await Promise.all([
+    getFeaturedBook(),
+    getPopularBooks(12),
+  ]);
+
   return (
-    <section className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-10 px-4 py-16">
-      <div className="flex max-w-2xl flex-col items-center gap-6 text-center">
-        <span className="rounded-full border border-border bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-          Introducing the University Library App
-        </span>
-        <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          Discover, reserve, and manage your research materials in one place.
-        </h1>
-        <p className="text-balance text-base text-muted-foreground sm:text-lg">
-          Build a modern library experience with curated collections, real-time
-          availability, and collaborative study tools powered by a Next.js
-          stack.
-        </p>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <Button size="lg">Explore catalog</Button>
-          <Button size="lg" variant="outline">
-            Learn more
-          </Button>
-        </div>
-      </div>
-    </section>
+    <main className="relative w-full">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_10%_10%,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
+      {featured ? (
+        <FeaturedBook book={featured} />
+      ) : (
+        <section className="mx-auto w-full max-w-6xl px-4 py-16">
+          <h1 className="text-2xl font-semibold">Welcome to the Library</h1>
+          <p className="text-muted-foreground">No books available right now.</p>
+        </section>
+      )}
+      <PopularBooks books={popular} />
+    </main>
   );
 }

@@ -7,10 +7,26 @@ const plexSans = localFont({
   variable: "--font-sans",
   display: "swap",
   src: [
-    { path: "../../public/fonts/IBMPlexSans-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../../public/fonts/IBMPlexSans-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../../public/fonts/IBMPlexSans-SemiBold.ttf", weight: "600", style: "normal" },
-    { path: "../../public/fonts/IBMPlexSans-Bold.ttf", weight: "700", style: "normal" },
+    {
+      path: "../../public/fonts/IBMPlexSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IBMPlexSans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IBMPlexSans-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IBMPlexSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
   ],
 });
 
@@ -18,7 +34,13 @@ const plexSans = localFont({
 const bebasDisplay = localFont({
   variable: "--font-display",
   display: "swap",
-  src: [{ path: "../../public/fonts/BebasNeue-Regular.ttf", weight: "400", style: "normal" }],
+  src: [
+    {
+      path: "../../public/fonts/BebasNeue-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
