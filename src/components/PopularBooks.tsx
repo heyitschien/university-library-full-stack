@@ -8,13 +8,15 @@ type Props = {
 export default function PopularBooks({ books }: Props) {
   if (!books?.length) return null;
   return (
-    <section className="mx-auto w-full max-w-6xl px-4 pb-16">
-      <h2 className="mb-6 text-2xl font-semibold tracking-tight">
-        Popular Books
-      </h2>
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-        {books.map((b) => (
-          <BookCard key={b.id} book={b} />
+    <section className="mx-auto w-full max-w-6xl px-4 pb-20">
+      <div className="mb-8 flex items-center justify-between">
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+          Popular Books
+        </h2>
+      </div>
+      <div className="flex flex-wrap gap-6 md:gap-8">
+        {books.map((book) => (
+          <BookCard key={book.id} book={book} />
         ))}
       </div>
     </section>
